@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f31b92bfc606c4aa24bb0c07eccbcf, type: 3}
   m_Name: Patient2
   m_EditorClassIdentifier: 
-  money: 0
-  problems: []
+  money: 10
+  problems:
+  - Strength: 0
+  - Strength: 10
+  - Strength: 0
+  - Strength: 0
+  - Strength: 10
   sadSprite: {fileID: 0}
   happySprite: {fileID: 0}

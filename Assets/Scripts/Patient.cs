@@ -7,7 +7,11 @@ public class Patient : ScriptableObject
 {
 
     public int money;
-    public Problem problems;
+    public Problem[] problems = new Problem[5];
+
+    //Trying to find a way to display all the problems a patient has and their strength
+    //public Problem[] problems;
+
     public Sprite sadSprite;
     public Sprite happySprite;
 
