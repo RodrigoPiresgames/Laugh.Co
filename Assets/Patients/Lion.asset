@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94f31b92bfc606c4aa24bb0c07eccbcf, type: 3}
-  m_Name: Bear
+  m_Name: Lion
   m_EditorClassIdentifier: 
   money: 10
   isHappy: 0
   dialog:
-  - 
-  - 
-  - 
-  - 
+  - '*This is very <color=#e31717>worrying</color> you see.'
+  - '*I just <color=#e31717>wish</color> I could do <color=#e7dc21>more</color>.'
+  - '*I''m so <color=#e7dc21>sorry</color>, I can''t <color=#e31717>help</color>
+    you.'
+  - '*I''m just not <color=#e7dc21>feeling</color> it today.'
   problems:
   - Strength: 10
   - Strength: 0
   - Strength: 0
   - Strength: 10
   - Strength: 0
-  sadSprite: {fileID: 0}
-  happySprite: {fileID: 0}
+  sadSprite: {fileID: 21300000, guid: 583456533b9167246a936c012609bc07, type: 3}
+  happySprite: {fileID: 21300000, guid: b6346e6c97cf6b548a1e8d97656993e3, type: 3}

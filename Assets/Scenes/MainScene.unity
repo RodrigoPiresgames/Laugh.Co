@@ -2324,8 +2324,10 @@ MonoBehaviour:
   shiftPatients:
   - {fileID: 11400000, guid: 8faf6e8c323db0f46987b68d41e2683b, type: 2}
   - {fileID: 11400000, guid: 3b033a73d6388584f8621f0850715bea, type: 2}
+  - {fileID: 11400000, guid: 8d8f1ac473e9f6044b88a3aecba1e7b7, type: 2}
+  - {fileID: 11400000, guid: 8faf6e8c323db0f46987b68d41e2683b, type: 2}
   - {fileID: 11400000, guid: 3b033a73d6388584f8621f0850715bea, type: 2}
-  - {fileID: 11400000, guid: 3b033a73d6388584f8621f0850715bea, type: 2}
+  - {fileID: 11400000, guid: 8faf6e8c323db0f46987b68d41e2683b, type: 2}
   patientText: {fileID: 1234605045}
   patientLook: {fileID: 2027810353}
   patientLeft: {fileID: 663748076}
