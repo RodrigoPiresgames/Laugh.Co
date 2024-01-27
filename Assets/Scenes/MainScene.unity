@@ -5649,7 +5649,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.16825384, g: 0.1725283, b: 0.1792453, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -8766,20 +8766,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "*This is a test text\n\n*Oh no i'm saying words i'm so sad\n\n*So that
-    just happened (laugh track)\n\n*Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At quis
-    risus sed vulputate odio ut enim blandit volutpat. Velit egestas dui id ornare
-    arcu odio ut. Nunc scelerisque viverra mauris in aliquam sem fringilla ut. Tristique
-    sollicitudin nibh sit amet commodo nulla facilisi nullam. Ipsum dolor sit amet
-    consectetur adipiscing elit ut aliquam. Sagittis vitae et leo duis ut. Tincidunt
-    lobortis feugiat vivamus at augue eget. Consectetur lorem donec massa sapien.
-    Sem nulla pharetra diam sit. Tempor id eu nisl nunc mi ipsum. Nunc faucibus a
-    pellentesque sit amet porttitor eget dolor. Gravida cum sociis natoque penatibus
-    et magnis dis parturient montes. Dui ut ornare lectus sit amet. Laoreet suspendisse
-    interdum consectetur libero id faucibus nisl tincidunt eget. Leo a diam sollicitudin
-    tempor id eu. Vulputate enim nulla aliquet porttitor lacus. Tellus id interdum
-    velit laoreet id.\r"
+  m_text: '*This is a <color=#ff0000ff>test</color> text.
+
+    *Oh no i''m saying
+    words i''m so <color=#33bb3e>sad</color>
+
+    *So that just <color=#4774d6>happened</color>
+    (laugh track)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8788,8 +8781,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279835072
-  m_fontColor: {r: 0.754717, g: 0.09611962, b: 0.09611962, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

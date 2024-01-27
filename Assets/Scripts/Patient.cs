@@ -9,6 +9,7 @@ public class Patient : ScriptableObject
 
     public int money;
     public bool isHappy;
+    public string[] dialog;
     public Problem[] problems = new Problem[5];
     public Sprite sadSprite;
     public Sprite happySprite;
