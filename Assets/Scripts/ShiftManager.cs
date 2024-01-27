@@ -10,27 +10,25 @@ public class ShiftManager : MonoBehaviour
     [SerializeField] public List<Patient> shiftPatients;
     [SerializeField] public TextMeshProUGUI patientText;
     [SerializeField] public Image patientLook;
+    [SerializeField] public RectTransform patientLeft;
 
     public int patientNumber = 0;
+    public float maxPatients;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        SetImagePacient(shiftPatients[patientNumber]);
-
-        foreach (string str in shiftPatients[patientNumber].dialog)
-        {
-            patientText.text += str;
-        }
-
+        maxPatients = shiftPatients.Count;
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-
+        if (PacientsOnList(shiftPatients))
+        {
+            SetUpNewPatient(shiftPatients[patientNumber]);
+            UpdateShiftDisplay(maxPatients);
+        }
     }
 
     private bool PacientsOnList(List<Patient> shiftPatients)
@@ -43,25 +41,31 @@ public class ShiftManager : MonoBehaviour
             return true;
     }
 
-    private void SetImagePacient(Patient currentPacient)
+    private void SetImagePacient(Patient currentPatient)
     {
-        if (currentPacient.isHappy)
-            patientLook.sprite = currentPacient.happySprite;
+        if (currentPatient.isHappy)
+            patientLook.sprite = currentPatient.happySprite;
         else
-            patientLook.sprite = currentPacient.sadSprite;
+            patientLook.sprite = currentPatient.sadSprite;
     }
 
-/*
-    private IEnumerable<string> PacientTextMaker(Patient currentPatient)
+    private void SetUpNewPatient(Patient currentPatient)
     {
-        string result = "";
+        SetImagePacient(shiftPatients[patientNumber]);
 
-        foreach(string line in currentPatient.dialog)
+        patientText.text = " ";
+
+        foreach (string str in shiftPatients[patientNumber].dialog)
         {
-            result += line;
-
-            yield return result;
+            patientText.text += str;
         }
     }
-*/
+
+    private void UpdateShiftDisplay(float maxPatients)
+    {
+        Vector3 v3 = patientLeft.localScale;
+        v3.y = shiftPatients.Count / maxPatients;
+        patientLeft.localScale = v3;
+    }
+
 }

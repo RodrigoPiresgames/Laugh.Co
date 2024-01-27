@@ -9,6 +9,7 @@ public class CallNextPatient : MonoBehaviour
 
     public void UpdatePatienList()
     {
-        sM.patientNumber += 1;
+        //sM.patientNumber += 1;
+        sM.shiftPatients.Remove(sM.shiftPatients[0]);
     }
 }

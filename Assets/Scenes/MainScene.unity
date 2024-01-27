@@ -2324,9 +2324,13 @@ MonoBehaviour:
   shiftPatients:
   - {fileID: 11400000, guid: 8faf6e8c323db0f46987b68d41e2683b, type: 2}
   - {fileID: 11400000, guid: 3b033a73d6388584f8621f0850715bea, type: 2}
+  - {fileID: 11400000, guid: 3b033a73d6388584f8621f0850715bea, type: 2}
+  - {fileID: 11400000, guid: 3b033a73d6388584f8621f0850715bea, type: 2}
   patientText: {fileID: 1234605045}
   patientLook: {fileID: 2027810353}
+  patientLeft: {fileID: 663748076}
   patientNumber: 0
+  maxPatients: 0
 --- !u!4 &287838553
 Transform:
   m_ObjectHideFlags: 0
@@ -10217,13 +10221,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1451460461}
+        m_TargetAssemblyTypeName: CallNextPatient, Assembly-CSharp
+        m_MethodName: UpdatePatienList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
