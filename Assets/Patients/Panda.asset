@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94f31b92bfc606c4aa24bb0c07eccbcf, type: 3}
-  m_Name: Patient1
+  m_Name: Panda
   m_EditorClassIdentifier: 
   money: 5
+  isHappy: 0
   problems:
   - Strength: 0
   - Strength: 0
   - Strength: 10
   - Strength: 0
   - Strength: 0
-  sadSprite: {fileID: 0}
-  happySprite: {fileID: 0}
+  sadSprite: {fileID: 21300000, guid: 82a6596e45ba87c40ac4fe92e01ebbee, type: 3}
+  happySprite: {fileID: 21300000, guid: 92311d5586cc47942bebd05f581b932f, type: 3}
