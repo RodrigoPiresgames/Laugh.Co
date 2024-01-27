@@ -12,8 +12,8 @@ public class Patient : ScriptableObject
     public bool isHappy;
     public string[] dialog;
     public Problem[] problems = new Problem[5];
-    public Image sadSprite;
-    public Image happySprite;
+    public Sprite sadSprite;
+    public Sprite happySprite;
 
     // Start is called before the first frame update
 

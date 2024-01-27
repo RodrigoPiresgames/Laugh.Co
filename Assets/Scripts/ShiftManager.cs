@@ -11,21 +11,19 @@ public class ShiftManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI patientText;
     [SerializeField] public Image patientLook;
 
+    public int patientNumber = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        while (PacientsOnList(shiftPatients))
+
+        SetImagePacient(shiftPatients[patientNumber]);
+
+        foreach (string str in shiftPatients[patientNumber].dialog)
         {
-            for (int i = 0; i < shiftPatients.Count; i++)
-            {
-                patientLook = shiftPatients[i].sadSprite;
-                foreach (string str in shiftPatients[i].dialog)
-                {
-                    patientText.text += str;
-                }
-                shiftPatients.Remove(shiftPatients[i]);
-            }
+            patientText.text += str;
         }
+
     }
 
     // Update is called once per frame
@@ -44,6 +42,15 @@ public class ShiftManager : MonoBehaviour
         else
             return true;
     }
+
+    private void SetImagePacient(Patient currentPacient)
+    {
+        if (currentPacient.isHappy)
+            patientLook.sprite = currentPacient.happySprite;
+        else
+            patientLook.sprite = currentPacient.sadSprite;
+    }
+
 /*
     private IEnumerable<string> PacientTextMaker(Patient currentPatient)
     {
