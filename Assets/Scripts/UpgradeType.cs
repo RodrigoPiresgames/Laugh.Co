@@ -1,4 +1,4 @@
-public enum PermenantUpgrades
+public enum UpgradeType
 {
     None,
     MoreAds,
