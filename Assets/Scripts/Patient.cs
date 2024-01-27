@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,18 @@ public class Patient : ScriptableObject
     public Sprite happySprite;
 
     // Start is called before the first frame update
+
+    bool TryReduceProblem(ProblemType type, int amount)
+    {
+        if (problems[(int)type].Strength > 0)
+        {
+            Mathf.Clamp(problems[(int)type].Strength -= amount, 0, 100);
+            return true;
+        }
+
+        return false;
+    }
+    
     void Start()
     {
 
