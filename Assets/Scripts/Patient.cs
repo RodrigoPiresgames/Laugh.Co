@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Patient", menuName = "ScriptableObjects/CreatePatient")]
 public class Patient : ScriptableObject
@@ -11,8 +12,8 @@ public class Patient : ScriptableObject
     public bool isHappy;
     public string[] dialog;
     public Problem[] problems = new Problem[5];
-    public Sprite sadSprite;
-    public Sprite happySprite;
+    public Image sadSprite;
+    public Image happySprite;
 
     // Start is called before the first frame update
 
