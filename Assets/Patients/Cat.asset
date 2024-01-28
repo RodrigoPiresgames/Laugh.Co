@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cat
   m_EditorClassIdentifier: 
   money: 10
-  isHappy: 0
+  isHappy: 1
   dialog:
   - '*You cant make me go <color=#842cdc>Meow</color> <color=#4774d6>Meow</color>!!'
   - '*I''m <color=#4774d6>NOT</color> a house cat!!'

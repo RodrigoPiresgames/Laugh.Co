@@ -27,6 +27,7 @@ public class ShiftManager : MonoBehaviour
         if (PacientsOnList(shiftPatients))
         {
             SetUpNewPatient(shiftPatients[patientNumber]);
+            UpdatePatientStatus(shiftPatients[patientNumber]);
             UpdateShiftDisplay(maxPatients);
         }
     }
@@ -68,4 +69,12 @@ public class ShiftManager : MonoBehaviour
         patientLeft.localScale = v3;
     }
 
+    private void UpdatePatientStatus(Patient currentPatient)
+    {
+        foreach(Problem problem in currentPatient.problems)
+        {
+            if (problem.Strength != 0)
+                currentPatient.isHappy = false;
+        }
+    }
 }

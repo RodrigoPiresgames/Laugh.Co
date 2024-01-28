@@ -15,8 +15,6 @@ public class Patient : ScriptableObject
     public Sprite sadSprite;
     public Sprite happySprite;
 
-    // Start is called before the first frame update
-
     bool TryReduceProblem(ProblemType type, int amount)
     {
         if (problems[(int)type].Strength > 0)

@@ -1,12 +1,25 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
 namespace DefaultNamespace
 {
-    public class ConsumableManager
+    public class ConsumableManager : MonoBehaviour
     {
-        
+        [SerializeField] public Consumable consumable;
+        [SerializeField] public ShiftManager sM;
 
-        public ProblemType[] GetApplicableTypesForPatient(Consumable consumable, Patient patient)
+        public Patient patient;
+
+        private void Update()
+        {
+            patient = sM.shiftPatients[0];
+        }
+
+        public ProblemType[] GetApplicableTypesForPatient()
         {
             ProblemType[] applicableTypes = consumable.TreatableTypes.Where(type => patient.problems.Any(problem => problem.Type == type)).ToArray();
             if (applicableTypes.Length == 0)
@@ -16,9 +29,9 @@ namespace DefaultNamespace
             return applicableTypes;
         }
 
-        public void UseConsumableOnPatient(Consumable consumable, Patient patient)
+        public void UseConsumableOnPatient()
         {
-            ProblemType[] applicableTypes = GetApplicableTypesForPatient(consumable, patient);
+            ProblemType[] applicableTypes = GetApplicableTypesForPatient();
             if (applicableTypes == null)
             {
                 return;
