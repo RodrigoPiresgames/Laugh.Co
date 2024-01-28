@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Panda
   m_EditorClassIdentifier: 
   money: 5
-  isHappy: 0
+  isHappy: 1
   dialog:
   - '*I used to be <color=#33bb3e>happy</color> but now i''m all grey...'
   - '*I really want an <color=#33bb3e>icecream</color> right now...'

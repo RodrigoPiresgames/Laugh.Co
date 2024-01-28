@@ -73,8 +73,15 @@ public class ShiftManager : MonoBehaviour
     {
         foreach(Problem problem in currentPatient.problems)
         {
-            if (problem.Strength != 0)
+            if (problem.Strength == 0)
+            {
+                currentPatient.isHappy = true;
+            }
+            else
+            {
                 currentPatient.isHappy = false;
+                break;
+            }
         }
     }
 }
