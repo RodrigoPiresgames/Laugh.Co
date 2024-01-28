@@ -24,8 +24,10 @@ namespace DefaultNamespace
             ProblemType[] applicableTypes = consumable.TreatableTypes.Where(type => patient.problems.Any(problem => problem.Type == type)).ToArray();
             if (applicableTypes.Length == 0)
             {
+                Debug.Log("Hello");
                 return null;
             }
+            Debug.Log("I'm cool");
             return applicableTypes;
         }
 
@@ -34,10 +36,12 @@ namespace DefaultNamespace
             ProblemType[] applicableTypes = GetApplicableTypesForPatient();
             if (applicableTypes == null)
             {
+                Debug.Log("I'm here");
                 return;
             }
             foreach (ProblemType type in applicableTypes)
             {
+                Debug.Log("I'm here but cool");
                 Problem problem = patient.problems.First(p => p.Type == type);
                 problem.Strength -= consumable.ConsumableStrength;
                 if (problem.Strength <= 0)
