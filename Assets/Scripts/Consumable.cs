@@ -8,10 +8,10 @@ public class Consumable
     public int ConsumableStrength;
     public string ConsumableName;
     
-    public Consumable(ProblemType[] treatableTypes, int ConsumableStrength, string consumableName)
+    public Consumable(ProblemType[] treatableTypes, int consumableStrength, string consumableName)
     {
         TreatableTypes = treatableTypes;
-        ConsumableStrength = ConsumableStrength;
+        ConsumableStrength = consumableStrength;
         ConsumableName = consumableName;
     }
 }
