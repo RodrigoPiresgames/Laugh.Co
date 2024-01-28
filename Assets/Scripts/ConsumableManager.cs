@@ -2,11 +2,11 @@ using System.Linq;
 
 namespace DefaultNamespace
 {
-    static public class ConsumableManager
+    public class ConsumableManager
     {
         
 
-        public static ProblemType[] GetApplicableTypesForPatient(Consumable consumable, Patient patient)
+        public ProblemType[] GetApplicableTypesForPatient(Consumable consumable, Patient patient)
         {
             ProblemType[] applicableTypes = consumable.TreatableTypes.Where(type => patient.problems.Any(problem => problem.Type == type)).ToArray();
             if (applicableTypes.Length == 0)
@@ -16,7 +16,7 @@ namespace DefaultNamespace
             return applicableTypes;
         }
 
-        public static void UseConsumableOnPatient(Consumable consumable, Patient patient)
+        public void UseConsumableOnPatient(Consumable consumable, Patient patient)
         {
             ProblemType[] applicableTypes = GetApplicableTypesForPatient(consumable, patient);
             if (applicableTypes == null)

@@ -1,8 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Consumable
+[CreateAssetMenu(fileName = "Treatment", menuName = "ScriptableObjects/CreateTreatment")]
+public class Consumable: ScriptableObject
 {
     public ProblemType[] TreatableTypes;
     public int ConsumableStrength;

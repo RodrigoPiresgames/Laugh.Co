@@ -1,8 +1,12 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
+[CreateAssetMenu(fileName = "Upgrade", menuName = "ScriptableObjects/CreateUpgrade")]
 [Serializable]
-public struct Upgrade
+public class Upgrade : ScriptableObject
 {
     public static Upgrade None => new Upgrade(UpgradeType.None, "", false);
 
